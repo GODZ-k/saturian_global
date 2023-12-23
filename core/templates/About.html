@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+
+    <!-- banner section-------------------------- -->
+
+    <section class="about-banner" id="about-banner">
+        <aside class="shade">
+            <div class="about-banner-container">
+                <div class="about-banner-head">
+                    <h1>
+                        About Us
+                    </h1>
+                    <h4><a href="{% url 'home' %}">Home</a>/About Us</h4>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <!-- company intro--------------------------------------- -->
+
+    <section class="intro-first" data-aos="fade-up">
+        <div class="intro-para">
+            <h1>Our Foundation</h1>
+            <p>Founded in 2021, as a Pvt Ltd Company under Companies act of India, we are Indian company with HQ in New Delhi and services capabilities PAN India through our own locations and strategic alliances. we address wide range of business challenges
+                & complexities A leading provider of online technical support services to consumers and small businesses across a wide range of computing and communications devices and software.Leveraging its proprietary Digital Service Cloud software
+                technology platform, GALAXY IT SOLUTIONS delivers support services to millions of customers globally and its services are available on demand. GALAXY IT SOLUTIONS recently launched on-ground support services as well, which are currently
+                available across PAN India</p>
+        </div>
+        <div class="intro-img">
+        </div>
+    </section>
+
+
+    <!-- team members section----------- -->
+
+    <!-- <div class="profile-head" data-aos="fade-up">
+    <h1>Meet Our Experience Team Members</h1>
+    <h3>We Have 5 Years Of Experiences</h3>
+  </div> -->
+
+    <!--
+  <section class="profile-card-container" data-aos="fade-up">
+    <div class="pf-card">
+      <div class="pf-img">
+        <img src="/media/profile.jpg" alt="">
+      </div>
+      <h1 id="not-hidden">Subhash Rawat</h1>
+      <div class="pf-content">
+        <p>+91 7982912295</p>
+        <p>Co Founder And Marketing Manager</p>
+        <div class="pf-link">
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-facebook-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pf-card">
+      <div class="pf-img">
+        <img src="/media/profile.jpg" alt="">
+      </div>
+      <h1 id="not-hidden">Virendra Kumar</h1>
+      <div class="pf-content">
+        <p>+91 8130119317</p>
+        <p>Founder Of Galaxy IT Solutions</p>
+        <div class="pf-link">
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-facebook-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="pf-card">
+      <div class="pf-img">
+        <img src="/media/profile.jpg" alt="">
+      </div>
+      <h1 id="not-hidden">Sagar Negi</h1>
+      <div class="pf-content">
+        <p>+91 9667791091</p>
+        <p>Co Founder Of galaxy IT Solutions</p>
+        <div class="pf-link">
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-facebook-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+
+    <!-- popular services section-------------------------- -->
+
+    <div class="popular-services" data-aos="fade-up">
+        <div class="heading">
+            <h1>Popular IT Services Provided By</h1>
+            <h2>Saturian Global</h2>
+        </div>
+        <center class="service-card-container">
+
+            <div class="about-card">
+                <img src="/media/sicon2.png" alt="">
+                <h1>Manage It Services</h1>
+                <p>We Provide The Best IT Management Services.</p>
+                <a href="{% url 'popular_service' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            <div class="about-card">
+                <img src="/media/sicon4.png" alt="">
+                <h1>Digital Marketing</h1>
+                <p>Reach Out More Customers Across Any Platform, Anywhere.</p>
+                <a href="{% url 'popular_service' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+
+            <div class="about-card">
+                <img src="/media/sicon3.png" alt="">
+                <h1>Web Development</h1>
+                <p>We Have The Best Consultation in Web Development.</p>
+                <a href="{% url 'popular_service' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            <div class="about-card">
+                <img src="/media/sicon1 (1).png" alt="">
+                <h1>Product Engineering</h1>
+                <p>We are proud of our scope of services and working.</p>
+                <a href="{% url 'popular_service' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </center>
+    </div>
+
+
+
+
+{% endblock start %}

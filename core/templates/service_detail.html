@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block start %}
+ <!-- banner section---------------------------- -->
+
+ <section class="banner" id="banner">
+    <aside class="shade">
+      <div class="banner-container">
+        <div class="banner-head">
+          <h1>
+            Services Details
+          </h1>
+          <h4><a href="Home.html">Home</a>/Services Details</h4>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- computer rental services------------- -->
+  <div class="rental-services">
+    <h1>Computer Rental Services</h1>
+    <h2>Coorporate Rentals</h2>
+    <p>A significant portion of the market is driven by corporate clients who rent computers for short-term projects,
+      events, or to meet temporary needs.</p>
+    <h2>Event Rentals</h2>
+    <p>The event and conference sector accounts for a substantial share of computer rentals, particularly for trade
+      shows, conferences, and exhibitions.</p>
+    <h1>Types of Computer Rented</h1>
+    <h2>Laptops</h2>
+    <p>Laptops are the most commonly rented computers due to their portability and versatility.</p>
+    <h2>Desktops</h2>
+    <p>Desktop computer rentals are popular for office setups and educational institutions.</p>
+    <hr>
+    <h1>Printer Accessories</h1>
+    <h2>Ink Cartridges</h2>
+    <p>These contain the ink used in inkjet printers and are available in various colors. Compatible and refillable
+      cartridges are also popular.</p>
+    <h2>Toner Cartridges</h2>
+    <p>Used in laser printers, these cartridges contain toner powder for high-quality text and image printing.</p>
+    <h2>Printer Cables</h2>
+    <p>USB and other cables are necessary for connecting printers to computers.</p>
+  </div>
+
+  <!-- main serviecs section----------------------- -->
+
+  <center class="content-container">
+    <div class="content-columns-1 h-w">
+      <form class="service-form">
+        <h1>Customize Your PC with Us.</h1>
+        <input type="text" id="fullname" placeholder="Name"><br>
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="text" id="ph-number" placeholder="Phone"><br>
+        <input type="text" id="purpose" placeholder="Purpose..."><br>
+        <textarea name="Write a message" id="deails" cols="30" rows="10" placeholder="PC Details..."></textarea>
+        <button class="btn"> Send Message <i class="fas fa-arrow-right"></i></button>
+      </form>
+      <div class="service-buttons">
+        <a href="{% url 'service_detail' %}">
+          <div class="s-b">
+            <p>Web Development</p>
+          </div>
+        </a>
+        <a href="https://www.bestgalaxyitsolutions.com" target="_blank">
+          <div class="s-b">
+            <p>More WIth Galaxy IT Solution</p>
+          </div>
+        </a>
+        <a href="{% url 'contact' %}">
+          <div class="s-b">
+            <p>Contact Us</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="content-columns-2 h-w">
+      <div class="service-details">
+        <h1>Service Overview</h1>
+        <h2>Unlock the Power of Technology with Saturian Global</h2>
+        <p>At Saturian Global, we're your trusted partner in navigating the ever-evolving landscape of technology.
+          Our comprehensive suite of IT services is designed to empower your business, streamline operations, and
+          enhance your competitive edge. From innovative software development to robust network solutions and
+          cutting-edge cybersecurity, we've got you covered</p>
+      </div>
+      <hr>
+      <div class="service-details">
+        <h1>Network Solutions</h1>
+        <h2>Seamless Connectivity, Maximum Productivity</h2>
+        <p>A well-designed network is the backbone of any modern business. Saturian Global specializes in crafting
+          scalable and reliable network solutions. We ensure that your data flows smoothly, your communication is
+          uninterrupted, and your business operates at peak efficiency.</p>
+      </div>
+      <hr>
+      <div class="service-details">
+        <h1> Cybersecurity</h1>
+        <h2>Protecting What Matters Most</h2>
+        <p>In an era of increasing cyber threats, safeguarding your digital assets is non-negotiable. Our cybersecurity
+          experts implement robust measures to protect your data, systems, and reputation. With cutting-edge solutions
+          and proactive monitoring, we keep your business safe from cyberattacks.</p>
+      </div>
+      <hr>
+      <div class="service-details">
+        <h1>IT Consulting</h1>
+        <h2>Your Strategic IT Partner</h2>
+        <p>Confused about your IT roadmap? Our experienced consultants are here to guide you. We analyze your current
+          infrastructure, understand your goals, and provide tailored recommendations. Let us help you make informed
+          decisions and stay ahead in the tech game.</p>
+      </div>
+      <hr>
+      <div class="service-details">
+        <h1>24/7 Support</h1>
+        <h2>Reliable Support When You Need It</h2>
+        <p>Technology doesn't sleep, and neither do we. Saturian Global offers round-the-clock IT support to ensure
+          your business runs smoothly. From troubleshooting to system maintenance, our experts are just a call away,
+          ready to assist you.</p>
+      </div>
+    </div>
+  </center>
+
+
+
+
+{% endblock start %}
