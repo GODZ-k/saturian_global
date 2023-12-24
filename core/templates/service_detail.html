@@ -45,14 +45,15 @@
 
   <center class="content-container">
     <div class="content-columns-1 h-w">
-      <form class="service-form">
+      <form class="service-form" action="{% url 'service_detail' %}" method="post">
+        {% csrf_token %}
         <h1>Customize Your PC with Us.</h1>
-        <input type="text" id="fullname" placeholder="Name"><br>
-        <input type="email" id="email" placeholder="Email"><br>
-        <input type="text" id="ph-number" placeholder="Phone"><br>
-        <input type="text" id="purpose" placeholder="Purpose..."><br>
-        <textarea name="Write a message" id="deails" cols="30" rows="10" placeholder="PC Details..."></textarea>
-        <button class="btn"> Send Message <i class="fas fa-arrow-right"></i></button>
+        <input type="text" name="name" id="fullname" placeholder="Name"><br>
+        <input type="email" name="email" id="email" placeholder="Email"><br>
+        <input type="text" name="contact" id="ph-number" placeholder="Phone"><br>
+        <input type="text" name="subject" id="purpose" placeholder="Purpose..."><br>
+        <textarea name="message" id="deails" cols="30" rows="10" placeholder="PC Details..."></textarea>
+        <button class="btn" type="submit"> Send Message <i class="fas fa-arrow-right"></i></button>
       </form>
       <div class="service-buttons">
         <a href="{% url 'service_detail' %}">

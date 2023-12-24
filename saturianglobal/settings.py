@@ -70,7 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'core.context_processors.categories',   # display all categories to navbar to all pages 
+                'core.context_processors.categories',   # display all categories to navbar to all pages
 
             ],
         },
@@ -115,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -144,3 +144,23 @@ STATICFILES_DIRS=[
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'    # add
 MEDIA_ROOT=os.path.join(BASE_DIR,'static/media')
 MEDIA_URL='/media/'
+
+
+
+# email
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "contact@saturianglobal.com"
+EMAIL_HOST_PASSWORD = "dizs cgdt esec kcnq"
+
+DEBUG_EMAIL = True
+
+# EMAIL_BACKEND = EMAIL_BACKEND
+# EMAIL_HOST = EMAIL_HOST
+# EMAIL_USE_TLS = EMAIL_USE_TLS
+# EMAIL_PORT = EMAIL_PORT
+# EMAIL_HOST_USER = EMAIL_HOST_USER
+# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD

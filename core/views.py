@@ -1,8 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from core.models import *
+from django.core.mail import EmailMessage
+from saturianglobal import settings
+from django.template.loader import render_to_string
 # Create your views here.
 
 def home(request):
+    #form save
+    form(request)
     # service card
     services_card=services()
     data={
@@ -15,6 +20,8 @@ def About(request):
     return render(request, 'About.html')
 
 def contact(request):
+    # form save
+    form(request)
     return render(request, 'Contactus.html')
 
 
@@ -26,6 +33,9 @@ def Services(request):
     return render(request, 'services.html',data)
 
 def service_details(request):
+    # form save
+    form(request)
+
     return render(request, 'service_detail.html')
 
 
@@ -43,14 +53,56 @@ def services():
 
 
 def detail(request):
+
+    # enquiry form
+    enquiry_form(request)
     items=product.objects.all()
-    if request.method == 'GET':
-        category_name=request.GET.get("category",'')
-        if category_name:
+    # if request.method == 'GET':
+    category_name=request.GET.get("category",'')
+    if category_name:
             items=product.objects.filter(categories__name=category_name)
 
     data={
         "items": items,
-        "category_name": category_name,
+        "filter": category_name,
     }
     return render(request, 'details.html',data)
+
+
+
+# form submit
+
+
+def form(request):
+    if request.method == 'POST':
+        name=request.POST.get("name")
+        email=request.POST.get("email")
+        contact_=request.POST.get("contact")
+        subject=request.POST.get("subject")
+        message=request.POST.get("message")
+        save_form=Contact(name=name, email=email, contact=contact_, subject=subject,message=message)
+        save_form.save()
+        return redirect('/')
+
+
+def enquiry_form(request):
+    if request.method == 'POST':
+        name=request.POST.get('name')
+        email=request.POST.get('email')
+        contact_=request.POST.get('contact')
+        period=request.POST.get('period')
+        Quantity=request.POST.get('quantity')
+        product=request.POST.get('product')
+        message=request.POST.get('message')
+        save_form=Product_form(name=name, email=email, contact=contact_, period=period,Quantity=Quantity,product=product,message=message)
+        save_form.save()
+
+        subject="welcome to product"
+        message=render_to_string("welcome.html",{
+            "name":name,
+            "product":product,
+        })
+        send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,[email])
+        send_mail.fail_silently=True
+        send_mail.send()
+        return redirect("/")

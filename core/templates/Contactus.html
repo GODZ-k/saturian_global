@@ -85,14 +85,16 @@
       <h1>Contact Us Directly</h1>
       <h3>Let Us Know Your Requirements</h3>
     </section>
-    <input type="text" id="fullname" placeholder="Full Name"><br>
-    <input type="email" id="email" placeholder="Email Address"><br>
-    <input type="text" id="phone" placeholder="Phone"><br>
-    <input type="text" id="Subject" placeholder="Enter Subject"><br>
-    <textarea name="write a message" id="" cols="30" rows="10" placeholder="Write a Message . . ."></textarea><br>
-    <button class="btn"> Send Message <i class="fas fa-arrow-right"></i></button>
+    <form action="{% url 'contact' %}" method="post">
+      {% csrf_token %}
+    <input type="text" name="name" id="fullname" placeholder="Full Name"><br>
+    <input type="email" name="email" id="email" placeholder="Email Address"><br>
+    <input type="text" name="contact" id="phone" placeholder="Phone"><br>
+    <input type="text" name="subject" id="Subject" placeholder="Enter Subject"><br>
+    <textarea name="message" id="" cols="30" rows="10" placeholder="Write a Message . . ."></textarea><br>
+    <button class="btn" type="submit"> Send Message <i class="fas fa-arrow-right"></i></button>
 
-
+  </form>
   </center>
 
 

@@ -8,35 +8,37 @@
         </div>
         <div class="modal-body">
           <div class="form">
-            <form>
+            <form action="{% url 'details' %}" method="post">
+              {% csrf_token %}
               <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" name="name" class="form-control" placeholder="Name">
               </div>
               <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" id="exampleInputEmail1"
+                <input type="email" name="email" class="form-control" placeholder="Email" id="exampleInputEmail1"
                   aria-describedby="emailHelp">
               </div>
               <div class="mb-3">
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Contact">
+                  <input type="text" name="contact" class="form-control" placeholder="Contact">
                 </div>
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Enter Time Period ">
+                  <input type="text" name="period" class="form-control" placeholder="Enter Time Period ">
                 </div>
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Quantity">
+                  <input type="text" name="quantity" class="form-control" placeholder="Quantity">
                 </div>
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Product Name">
+                  <input type="text" name="product" class="form-control" placeholder="Product Name">
                 </div>
-                <textarea name="content" class="form-control" id="" cols="30" rows="4" placeholder="Details & Specifications"></textarea>
+                <textarea name="message" class="form-control" id="" cols="30" rows="4" placeholder="Details & Specifications"></textarea>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Send message</button>
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Send message</button>
-          </div>
+
         </div>
       </div>
     </div>
