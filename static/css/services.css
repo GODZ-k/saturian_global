@@ -414,6 +414,10 @@
     height: 173px;
 }
 
+.card-body h6 {
+    color: #763383;
+}
+
 .socialmedia {
     display: flex;
     align-items: center;

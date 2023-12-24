@@ -17,16 +17,10 @@
           Products
         </a>
         <ul class="dropdown-menu res-drop">
-          <li><a class="dropdown-item" href="Product-Apple.html">Apple</a></li>
-          <li><a class="dropdown-item" href="Product-Laptops.html">Laptops</a></li>
-          <li><a class="dropdown-item" href="Product-Desktops.html">Desktops</a></li>
-          <li><a class="dropdown-item" href="Product-Printers.html">Printers</a></li>
-          <li><a class="dropdown-item" href="Product-Tablets.html">Tablets</a></li>
-          <li><a class="dropdown-item" href="Product-All In One.html">All In One</a></li>
-          <li><a class="dropdown-item" href="Product-CCTV.html">CCTV</a></li>
-          <li><a class="dropdown-item" href="Product-Scanners.html">Scanners</a></li>
-          <li><a class="dropdown-item" href="Product-Projectors.html">Projectors</a></li>
-          <li><a class="dropdown-item" href="Product-Servers.html">Servers</a></li>
+
+          {% for category in categories %}
+          <li><a class="dropdown-item" href="{% url 'details' %}?category={{category.name}}">{{category.name}}</a></li>
+          {% endfor %}
         </ul>
       </li>
       <li>

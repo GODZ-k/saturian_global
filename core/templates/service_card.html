@@ -1,35 +1,17 @@
 <center class="main-section">
     <!-- <section class="container" data-aos="fade-up"> -->
-    <a href="Product-Laptops.html">
-      <div class="info-card" data-tilt>
-        <img src="/media/laptop.png" alt="" />
-        <h4>Computer Rental Services</h4>
-      </div>
-    </a>
-    <a href="{% url 'service_detail' %}">
-      <div class="info-card" data-tilt>
-        <img src="/media/it-sales.png" alt="" />
-        <h4>IT Sales</h4>
-      </div>
-    </a>
-    <a href="{% url 'service_detail' %}">
-      <div class="info-card" data-tilt>
-        <img src="/media/AMC.png" alt="" />
-        <h4>AMC Computer Services</h4>
-      </div>
-    </a>
-    <a href="{% url 'service_detail' %}">
-      <div class="info-card" data-tilt>
-        <img src="/media/desktop.png" alt="" />
-        <h4>Customise Your PC</h4>
-      </div>
-    </a>
-    <a href="Product-Printers.html">
-      <div class="info-card" data-tilt>
-        <img src="/media/printer.png" alt="" />
-        <h4>Printers & Accessories</h4>
-      </div>
-    </a>
+
+
+      {% for items in item  %}
+
+      <a href="{% url 'service_detail' %}">
+        <div class="info-card" data-tilt>
+          <img src="/media/{{items.image}}" alt="service card" />
+          <h4>{{items.name}}</h4>
+        </div>
+      </a>
+
+      {% endfor %}
     <section class="container-info" data-aos="fade-up">
       <h4>HOW CAN I HELP YOU</h4>
       <h1>Business Solutions To Growth Business</h1>
