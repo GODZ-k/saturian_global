@@ -10,8 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+
 from pathlib import Path
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*)4eyj2ap5dsr##b07x-1ev=)_&9o6s(gz0z^*h2y&cl)+!8vo'
+SECRET_KEY =  os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,13 +43,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise',   # serve static and media file when debug false
+    'whitenoise.runserver_nostatic',
+
 ]
 
 EXTERNAL_APPS = [
     'core',
 ]
 
-INSTALLED_APPS = INSTALLED_APPS + EXTERNAL_APPS
+INSTALLED_APPS += EXTERNAL_APPS
+
+# SECURE_SSL_REDIRECT = True  # it must be true in production
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -115,11 +128,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = [
+    ('en-us', 'English (United States)'),
+    # Add other languages if necessary
+]
 TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -132,35 +149,36 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 # static files
-
-
 STATIC_URL='/static/'
 STATIC_ROOT=os.path.join(BASE_DIR / 'staticfiles')
-STATICFILES_DIRS=[
-    os.path.join(BASE_DIR,'static')
-]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'    # add
-MEDIA_ROOT=os.path.join(BASE_DIR,'static/media')
-MEDIA_URL='/media/'
 
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static'),
+
+]
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+MEDIA_ROOT=os.path.join(BASE_DIR / 'staticfiles/media')
+MEDIA_URL='/media/'
 
 
 # email
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "contact@saturianglobal.com"
-EMAIL_HOST_PASSWORD = "dizs cgdt esec kcnq"
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "saturian.request@gmail.com"
+# EMAIL_HOST_PASSWORD = "dkpb gxca lznx dqia"
 
-DEBUG_EMAIL = True
+# DEBUG_EMAIL = True
 
-# EMAIL_BACKEND = EMAIL_BACKEND
-# EMAIL_HOST = EMAIL_HOST
-# EMAIL_USE_TLS = EMAIL_USE_TLS
-# EMAIL_PORT = EMAIL_PORT
-# EMAIL_HOST_USER = EMAIL_HOST_USER
-# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')

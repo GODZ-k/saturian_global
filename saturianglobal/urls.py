@@ -19,7 +19,7 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import re_path
-# from django.conf import settings
+from django.conf import settings
 from saturianglobal import settings
 from django.views.static import serve
 

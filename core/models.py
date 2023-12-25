@@ -58,7 +58,7 @@ class Product_form(models.Model):
     name=models.CharField(max_length=255,null=True, blank=True)
     email=models.EmailField(max_length=255,null=True, blank=True)
     contact=models.IntegerField(null=True, blank=True)
-    period=models.IntegerField(null=True, blank=True)
+    period=models.CharField(null=True, blank=True, max_length=255)
     Quantity=models.IntegerField(null=True, blank=True)
     product=models.CharField(max_length=255,null=True, blank=True)
     message=models.TextField(null=True, blank=True)

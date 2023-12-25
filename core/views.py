@@ -82,8 +82,42 @@ def form(request):
         message=request.POST.get("message")
         save_form=Contact(name=name, email=email, contact=contact_, subject=subject,message=message)
         save_form.save()
+
+        # send to user
+        send_greeting(name,email)
+
+        # send to admin
+        send_to_boss(name,email,contact_,subject,message)
         return redirect('/')
 
+
+def send_greeting(name,email):
+    subject="Welcome to Saturian Global - Thanks for contacting us"
+    message=render_to_string("greeting.html",{
+            "name":name,
+        })
+    send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,[email])
+    send_mail.fail_silently=True
+    send_mail.send()
+
+
+def send_to_boss(name,email,contact_,subject,message):
+    subject="User information"
+    message=render_to_string("user_data.html",{
+            "name":name,
+            "subject":subject,
+            "email":email,
+            "contact":contact_,
+            "message":message
+
+        })
+    send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,["saturianglobal@gmail.com"])
+    send_mail.fail_silently=True
+    send_mail.send()
+
+
+
+# enquiry form regarding product
 
 def enquiry_form(request):
     if request.method == 'POST':
@@ -97,12 +131,36 @@ def enquiry_form(request):
         save_form=Product_form(name=name, email=email, contact=contact_, period=period,Quantity=Quantity,product=product,message=message)
         save_form.save()
 
-        subject="welcome to product"
-        message=render_to_string("welcome.html",{
+        # send to user
+        send_to_user(name,product,email)
+
+        # send to admin
+        send_to_admin(name,email,contact_,period,Quantity,product,message)
+        return redirect("/")
+
+def send_to_user(name,product,email):
+    subject="Welcome to Saturian Global - Thanks for contacting us"
+    message=render_to_string("welcome.html",{
             "name":name,
             "product":product,
         })
-        send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,[email])
-        send_mail.fail_silently=True
-        send_mail.send()
-        return redirect("/")
+    send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,[email])
+    send_mail.fail_silently=True
+    send_mail.send()
+
+
+def send_to_admin(name,email,contact_,period,Quantity,product,message):
+    subject="User information"
+    message=render_to_string("user_info.html",{
+            "name":name,
+            "product":product,
+            "email":email,
+            "contact":contact_,
+            "period":period,
+            "Quantity":Quantity,
+            "message":message
+
+        })
+    send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,["saturianglobal@gmail.com"])
+    send_mail.fail_silently=True
+    send_mail.send()
