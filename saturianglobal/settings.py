@@ -43,8 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise',   # serve static and media file when debug false
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise',   # serve static and media file when debug false
+    # 'whitenoise.runserver_nostatic',
 
 ]
 
@@ -61,7 +61,7 @@ INSTALLED_APPS += EXTERNAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',   # serve static files
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',   # serve static files
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
