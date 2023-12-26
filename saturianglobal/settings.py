@@ -31,7 +31,7 @@ SECRET_KEY =  os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['65.1.64.146', 'www.saturianglobal.com', 'saturianglobal.com','127.0.0.1']
 
 
 # Application definition
