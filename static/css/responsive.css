@@ -520,7 +520,7 @@
         width: 60%;
         height: 40vh;
         margin: 10px;
-        background: url(media/intro-img.jpg);
+        background: url(/media/intro-img.jpg);
         border: 0.5px solid #c198d9;
         border-radius: 15px;
         box-shadow: 0px 1px 15px black;
