@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =  os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['65.1.64.146', 'www.saturianglobal.com', 'saturianglobal.com','127.0.0.1']
 
@@ -54,8 +54,8 @@ EXTERNAL_APPS = [
 
 INSTALLED_APPS += EXTERNAL_APPS
 
-SECURE_SSL_REDIRECT = True  # it must be true in production
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True  # it must be true in production
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
@@ -104,6 +104,19 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": os.environ.get('DATABASE_NAME'),
+#         "USER": os.environ.get('DATABASE_USER'),
+#         "PASSWORD": os.environ.get('DATABASE_PASSWORD'),
+#         "HOST": os.environ.get('DATABASE_HOST'),
+#         "PORT": os.environ.get('DATABASE_PORT'),
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#         },
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
