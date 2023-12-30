@@ -5,14 +5,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% block meta %}
+  {% endblock%}
   <title>{% block title %} {% endblock %}</title>
+  <meta http-equiv="refresh" content="5">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <meta name="description" content="GALAXY IT SOLUTIONS delivers support services to millions of customers globally and its services are available on demand. GALAXY IT SOLUTIONS recently launched on-ground support services as well, which are currently
-  available across PAN India">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-  <link rel="icon" type="image/x-icon" href="/media/saturian.png">
   <link rel="stylesheet" href="{% static 'css/home.css' %}" />
   <link rel="stylesheet" href="{% static 'css/contactUs.css' %}" />
   <link rel="stylesheet" href="{% static 'css/about.css' %}" />

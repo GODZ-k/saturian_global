@@ -22,8 +22,17 @@ from django.urls import re_path
 from django.conf import settings
 from saturianglobal import settings
 from django.views.static import serve
+from django.views.generic.base import TemplateView
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap,CategoryViewSitemap
+
+
+sitemaps = {'static': StaticViewSitemap,'category': CategoryViewSitemap}
 
 urlpatterns = [
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+
     path('admin@wsldsl@1209psksat', admin.site.urls),
     re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),  # whitenoise if debug = False
     re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), # whitenoise if debug = False

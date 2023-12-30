@@ -13,6 +13,10 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
+
+    def get_absolute_url(self):
+        return f'/Products/?category={self}'
+
 class product(models.Model):
     categories=models.ForeignKey(Category,null=True,blank=True,related_name='products',on_delete=models.CASCADE)
     name=models.CharField(max_length=300,null=True,blank=True)
@@ -24,6 +28,10 @@ class product(models.Model):
 
     class Meta:
         verbose_name_plural = 'Products'
+
+    # def get_absolute_url(self):
+        # return f'/{self}/'
+
 # service card
 class service_card(models.Model):
     name=models.CharField(max_length=255 , null=True, blank=True)
