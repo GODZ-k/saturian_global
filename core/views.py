@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
 from core.models import *
-from django.core.mail import EmailMessage
+from django.core.mail import EmailMessage,EmailMultiAlternatives
 from saturianglobal import settings
 from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 # Create your views here.
 
 def home(request):
@@ -96,7 +97,9 @@ def send_greeting(name,email):
     message=render_to_string("greeting.html",{
             "name":name,
         })
-    send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,[email])
+    plain_message=strip_tags(message)
+    send_mail=EmailMultiAlternatives(subject,plain_message,settings.EMAIL_HOST_USER,[email])
+    send_mail.attach_alternative(message, "text/html")
     send_mail.fail_silently=True
     send_mail.send()
 
@@ -144,7 +147,9 @@ def send_to_user(name,product,email):
             "name":name,
             "product":product,
         })
-    send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,[email])
+    plain_msg=strip_tags(message)
+    send_mail=EmailMultiAlternatives(subject,plain_msg,settings.EMAIL_HOST_USER,[email])
+    send_mail.attach_alternative(message, "text/html")
     send_mail.fail_silently=True
     send_mail.send()
 
