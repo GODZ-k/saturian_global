@@ -24,10 +24,10 @@ from saturianglobal import settings
 from django.views.static import serve
 from django.views.generic.base import TemplateView
 from django.contrib.sitemaps.views import sitemap
-from .sitemaps import StaticViewSitemap,CategoryViewSitemap
+from .sitemaps import StaticViewSitemap,CategoryViewSitemap,PostViewSitemap
 
 
-sitemaps = {'static': StaticViewSitemap,'category': CategoryViewSitemap}
+sitemaps = {'static': StaticViewSitemap,'category': CategoryViewSitemap,'product': PostViewSitemap}
 
 urlpatterns = [
     path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),),

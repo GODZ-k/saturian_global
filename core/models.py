@@ -16,7 +16,7 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     def get_absolute_url(self):
-        return f'/Products/?category={self}'
+     return f'/Products/?category={self.name}'
 
 class product(models.Model):
     categories=models.ForeignKey(Category,null=True,blank=True,related_name='products',on_delete=models.CASCADE)
@@ -31,8 +31,8 @@ class product(models.Model):
     class Meta:
         verbose_name_plural = 'Products'
 
-    # def get_absolute_url(self):
-        # return f'/{self}/'
+    def get_absolute_url(self):
+        return f'/Products_detail/{self.slug}/'
 
 # service card
 class service_card(models.Model):

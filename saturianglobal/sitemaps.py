@@ -11,9 +11,9 @@ class StaticViewSitemap(Sitemap):
         return reverse(items)
 
 
-# class PostViewSitemap(Sitemap):
-#     def items(self):
-#         return product.objects.all()
+class PostViewSitemap(Sitemap):
+    def items(self):
+        return product.objects.all()
 
 
 class CategoryViewSitemap(Sitemap):
