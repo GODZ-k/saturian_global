@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block start %}
+
+
+
+<div class="empty"></div>
+<div class="empty"></div>
+<div class="empty"></div>
+
+
+<div class="bread-crumb" id="bread-crumb">
+  <h2>
+    <a href="{% url 'home' %}">Home</a>/<a href="#">{{item.categories.name}}</a>/ &nbsp;&nbsp;&nbsp; {{item.name}}
+  </h2>
+</div>
+
+<div class="canvas">
+  <div class="product-img">
+    <img src="/media/{{item.image}}" alt="{{item.name}}">
+  </div>
+  <div class="product-specs">
+    <div class="specification">
+      <h1>{{item.name}}</h1>
+      <p>{{item.description|safe }}</p>
+    </div>
+    <div class="service-provided">
+      <div class="s-p-tags"><i class="fa fa-truck"></i> Delivery Within 72 Hours</div>
+      <div class="s-p-tags"><i class="fa fa-calendar"></i> Flexible rental Tenure</div>
+      <div class="s-p-tags"><i class="fa fa-book"></i> KYC Document to be Submitted Before Delivery</div>
+      <button type="button" class="btn btn-def" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo">Request Quote <i class="fa fa-arrow-right"></i></button>
+    </div>
+  </div>
+</div>
+
+{% include 'quotqtion.html' %}
+
+{% endblock start %}

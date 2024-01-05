@@ -1,4 +1,5 @@
 from django.db import models
+from autoslug import AutoSlugField
 
 # Create your models here.
 
@@ -22,6 +23,7 @@ class product(models.Model):
     name=models.CharField(max_length=300,null=True,blank=True)
     image=models.ImageField(upload_to="image",null=True,blank=True)
     description=models.TextField(null=True,blank=True)
+    slug=AutoSlugField(populate_from="name",unique=True,null=True,blank=True)
 
     def __str__(self) -> str:
         return self.name
@@ -65,7 +67,7 @@ class Contact(models.Model):
 class Product_form(models.Model):
     name=models.CharField(max_length=255,null=True, blank=True)
     email=models.EmailField(max_length=255,null=True, blank=True)
-    contact=models.IntegerField(null=True, blank=True)
+    contact=models.CharField(max_length=255,null=True, blank=True)
     period=models.CharField(null=True, blank=True, max_length=255)
     Quantity=models.IntegerField(null=True, blank=True)
     product=models.CharField(max_length=255,null=True, blank=True)

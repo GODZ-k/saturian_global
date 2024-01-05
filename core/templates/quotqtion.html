@@ -8,7 +8,7 @@
         </div>
         <div class="modal-body">
           <div class="form">
-            <form action="{% url 'details' %}" method="post">
+            <form action="{% url 'view' item.slug %}" method="post">
               {% csrf_token %}
               <div class="mb-3">
                 <input type="text" name="name" class="form-control" placeholder="Name">
@@ -28,7 +28,7 @@
                   <input type="text" name="quantity" class="form-control" placeholder="Quantity">
                 </div>
                 <div class="mb-3">
-                  <input type="text" name="product" class="form-control" placeholder="Product Name">
+                  <input type="text" name="product" class="form-control" placeholder="Product Name" value="{{item.name}}">
                 </div>
                 <textarea name="message" class="form-control" id="" cols="30" rows="4" placeholder="Details & Specifications"></textarea>
               </div>

@@ -28,27 +28,18 @@
 
 <div class="product-card-container">
     {% for item in  items %}
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;" onclick="window.location.href='{% url 'view' item.slug %}'">
       <div class="card-body-1">
-        <img src="/media/{{item.image}}" class="card-img-top" alt="...">
+        <img src="/media/{{item.image}}" class="card-img-top" alt="{{item.name}}">
       </div>
       <div class="card-body">
         <h6 class="apple">{{item.categories.name}}</h6>
         <h5 class="card-title">{{item.name}}</h5>
         <p class="card-text">{{item.description}}</p>
-        <!-- <button class="btn-def" >
-          <a href=""> </a>
-        </button> -->
-        <button type="button" class="btn btn-def" data-bs-toggle="modal" data-bs-target="#exampleModal"
-          data-bs-whatever="@mdo">Request Quote <i class="fa fa-arrow-right"></i></button>
+
       </div>
     </div>
     {% endfor %}
 </div>
-
-
-<!-- quotqtion modal----------------------------------------------------- -->
-
-{% include 'quotqtion.html' %}
 
 {% endblock start %}

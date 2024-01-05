@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from core.models import *
 from django.core.mail import EmailMessage,EmailMultiAlternatives
 from saturianglobal import settings
@@ -55,8 +55,6 @@ def services():
 
 def detail(request):
 
-    # enquiry form
-    enquiry_form(request)
     items=product.objects.all()
     # if request.method == 'GET':
     category_name=request.GET.get("category",'')
@@ -169,3 +167,17 @@ def send_to_admin(name,email,contact_,period,Quantity,product,message):
     send_mail=EmailMessage(subject,message,settings.EMAIL_HOST_USER,["saturianglobal@gmail.com"])
     send_mail.fail_silently=True
     send_mail.send()
+
+
+
+def view(request,slug):
+    try:
+      # enquiry form
+      enquiry_form(request)
+      item=get_object_or_404(product , slug=slug)
+      data_={
+        "item":item,
+      }
+    except:
+       return render(request, "404.html")
+    return render(request,"View_details.html",data_)

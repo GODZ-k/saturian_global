@@ -9,5 +9,6 @@ urlpatterns = [
     path('Services/',Services,name="services"),
     path("Products/",detail,name="details"),
     path('Service_detail/',service_details,name="service_detail"),
-    path('Popular_services/',popular_services,name="popular_service")
+    path('Popular_services/',popular_services,name="popular_service"),
+    path("Products_detail/<slug>",view,name="view")
 ]
