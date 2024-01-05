@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from core.models import *
 from django.core.mail import EmailMessage,EmailMultiAlternatives
 from saturianglobal import settings
+from django.contrib import messages
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 # Create your views here.
@@ -87,6 +88,10 @@ def form(request):
 
         # send to admin
         send_to_boss(name,email,contact_,subject,message)
+
+        # message
+        messages.success(request, "Your Product Enquiry has been send successfully")
+
         return redirect('/')
 
 
@@ -137,6 +142,9 @@ def enquiry_form(request):
 
         # send to admin
         send_to_admin(name,email,contact_,period,Quantity,product,message)
+
+        # message
+        messages.success(request, "Your Product Enquiry has been send successfully")
         return redirect("/")
 
 def send_to_user(name,product,email):
