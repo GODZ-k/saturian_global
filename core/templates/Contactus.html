@@ -1,106 +1,183 @@
 {% extends 'base.html' %}
-
-{% block title %}Contact us- Saturian Global{% endblock %}
-{% block meta %}
-
-<link rel="icon" href="/media/saturian.png">
-<meta name="keywords" content="Buy, Rent, Business, PC , Tablets, Laptop ">
+{% block title %}Contact us- Saturian Global
 {% endblock %}
-{% block start %}
+ {% block meta %}
 
-  <!-- banner section-------------------------- -->
+<link rel="icon" href="/media/saturian.png" />
+<meta name="keywords" content="Buy, Rent, Business, PC , Tablets, Laptop " />
+{% endblock %}
+ {% block start %}
 
-  <section class="banner" id="banner">
-    <aside class="shade">
-      <div class="banner-container">
-        <div class="banner-head">
-          <h1>
-            Contact Us
-          </h1>
-          <h4><a href="{% url 'home' %}">Home</a>/Contact Us</h4>
-        </div>
-      </div>
-    </aside>
-  </section>
+<!-- banner section-------------------------- -->
 
-  <!-- contact card-----------section------- -->
-
-  <section class="contact-container" data-aos="fade-up">
-    <div class="contact-card" >
-      <div class="card-img">
-        <i class="fa fa-phone"></i>
-      </div>
-      <div class="card-info">
-        <h1>Call Us For Any Enquiry</h1>
-        <!-- for contact -->
-        <p>For Contact : <a href="tel:+91-9667791091">+91-9667791091</a>
-          <!-- contact -->
-          <br>
-          <a href="tel:01146535346">+91-01146535346</a>
-        </p>
-        <!-- for complaints & service -->
-       <p>For Complaint & Service : <a href="tel:+91-8130980016">+91-8130980016</a></p>
-        <!-- querries   -->
-       <p>Your Querries : <a href="tel:+91-7982912295">+91-7982912295</a></p>
-      </div>
+<!-- banner section---------------------------------- -->
+<section
+  style="background: url(/static/media/banner.jpg) no-repeat center/cover fixed"
+  class="about-banner"
+  id="about-banner"
+>
+  <aside class="shade flex-center">
+    <div class="about-banner-head">
+      <h1>Contact Us</h1>
+      <h4><a href="{% url 'home' %}">Home</a>/Contact Us</h4>
     </div>
+  </aside>
+</section>
 
-    <div class="contact-card" >
-      <div class="card-img">
-        <i class="fa fa-envelope"></i>
-      </div>
-      <div class="card-info email-address">
-        <h1>For Business Support</h1>
-        <p><a href="mailto:Info@saturianglobal.com" target="_blank">Info@saturianglobal.com</a></p>
-        <p><a href="mailto:contact@Saturiannglobal.com" target="_blank">Contact@Saturianglobal.com</a></p>
-      </div>
+<!-- contact card-----------section------- -->
+
+<!-- contact card-----------section------- -->
+<section class="contact-container flex-center-col wd-page">
+  <div class="contact-card-box m-20">
+    <div class="card-img">
+      <lord-icon
+        src="https://cdn.lordicon.com/bgebyztw.json"
+        trigger="morph"
+        state="morph-phone-ring-finish"
+        style="width: 90px; height: 90px"
+        colors="primary:#FFD700"
+      >
+      </lord-icon>
     </div>
-
-    <div class="contact-card " >
-      <div class="card-img">
-        <i class="fas fa-map-marked-alt"></i>
-      </div>
-      <div class="card-info office-address">
-        <h1>Visit Here</h1>
-        <p><a href="https://maps.app.goo.gl/DSfwguAsY2qvo5eR8" target="_blank">B 57, Pocket B, Okhla Phase I, Okhla Industrial Estate, New Delhi, Delhi 110020</a></p>
-      </div>
+    <div class="card-info">
+      <h1>Call Us For Any Enquiry</h1>
+      <!-- for contact -->
+      <p>
+        For Contact : <a href="tel:+91-9667791091">+91-9667791091</a>
+        <!-- contact -->
+        <br />
+        <a href="tel:+91-01146535346">+91-01146535346</a>
+      </p>
+      <!-- for complaints & service -->
+      <p>
+        For Complaint & Service :
+        <a href="tel:+91-8800654575">+91-8800654575</a>
+      </p>
+      <!-- querries   -->
+      <p>Your Querries : <a href="tel:+91-7982912295">+91-7982912295</a></p>
     </div>
+  </div>
 
-  </section>
+  <div class="contact-card-box m-20">
+    <div class="card-img">
+      <lord-icon
+        src="https://cdn.lordicon.com/xtzvywzp.json"
+        trigger="morph"
+        state="morph-phone-ring-finish"
+        style="width: 90px; height: 90px"
+        colors="primary:#FFD700"
+      >
+      </lord-icon>
+    </div>
+    <div class="card-info email-address">
+      <h1>For Business Support</h1>
+      <p>
+        <a href="mailto:Info@saturianglobal.com" target="_blank"
+          >Info@Saturianglobal.com</a
+        >
+      </p>
+      <p>
+        <a href="mailto:contact@Saturiannglobal.com" target="_blank"
+          >Contact@Saturianglobal.com</a
+        >
+      </p>
+    </div>
+  </div>
+  <div class="contact-card-box m-20">
+    <div class="card-img">
+      <lord-icon
+        src="https://cdn.lordicon.com/surcxhka.json"
+        trigger="hover"
+        state="hover-roll"
+        state="in-jump-dynamic"
+        style="width: 90px; height: 90px"
+        colors="primary:#FFD700"
+      >
+      </lord-icon>
+    </div>
+    <div class="card-info office-address">
+      <h1>Visit Here</h1>
+      <p>
+        <a href="https://maps.app.goo.gl/DSfwguAsY2qvo5eR8" target="_blank"
+          >B 57, Pocket B, Okhla Phase I, Okhla Industrial Estate, New Delhi,
+          Delhi 110020</a
+        >
+      </p>
+    </div>
+  </div>
+</section>
 
-  <div class="empty"></div>
+<!-- google maps section----------------------- -->
 
-
-  <!-- google maps section----------------------- -->
-
-  <center class="maps" data-aos="fade-up">
+<section class="map-container wd-page my20">
+  <center class="maps">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3505.2749114494063!2d77.27761057549715!3d28.531455475720065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMxJzUzLjIiTiA3N8KwMTYnNDguNyJF!5e0!3m2!1sen!2sin!4v1695788710011!5m2!1sen!2sin"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
   </center>
+</section>
 
-
-  <div class="empty"></div>
-  <div class="empty"></div>
-  <!-- contact form section------------------------------------// -->
-
-  <center class="contact-form" data-aos="fade-up">
+<!-- contact form section------------------------------------// -->
+<section class="form-outer-container flex-center wd-page">
+  <center class="contact-form my10" data-aos="fade-up">
     <section class="form-head">
       <h1>Contact Us Directly</h1>
       <h3>Let Us Know Your Requirements</h3>
     </section>
     <form action="{% url 'contact' %}" method="post">
       {% csrf_token %}
-    <input type="text" name="name" id="fullname" placeholder="Full Name"><br>
-    <input type="email" name="email" id="email" placeholder="Email Address"><br>
-    <input type="text" name="contact" id="phone" placeholder="Phone"><br>
-    <input type="text" name="subject" id="Subject" placeholder="Enter Subject"><br>
-    <textarea name="message" id="" cols="30" rows="10" placeholder="Write a Message . . ."></textarea><br>
-    <button class="btn" type="submit"> Send Message <i class="fas fa-arrow-right"></i></button>
-
-  </form>
+      <input
+        type="text"
+        name="name"
+        id="fullname"
+        placeholder="Full Name"
+      /><br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email Address"
+      /><br />
+      <input type="text" name="contact" id="phone" placeholder="Phone" /><br />
+      <input
+        type="text"
+        name="subject"
+        id="Subject"
+        placeholder="Enter Subject"
+      /><br />
+      <textarea
+        name="message"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Write a Message . . ."
+      ></textarea
+      ><br />
+      <button class="btn" type="submit">
+        Send Message <i class="fas fa-arrow-right"></i>
+      </button>
+    </form>
   </center>
+</section>
 
+
+ <!-- contact us card section==================== -->
+ <div class="contact-card-container wd-page flex-center-col">
+    <div class="contact-card wd-page flex-center-col my20">
+        <h1 class="mpt-5 my10">To Get Latest Price Call Us</h1>
+        <h1 class="mpt-5 my10">Don't Be Hesitate To Contact Us</h1>
+        <a href="tel:+91-9667791091">
+            <lord-icon class="my10" src="https://cdn.lordicon.com/srsgifqc.json" trigger="hover"
+                style="width:60px;height:60px" colors="primary:#FFD700">
+            </lord-icon>
+        </a>
+    </div>
+</div>
 
 {% endblock start %}

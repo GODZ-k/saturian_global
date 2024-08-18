@@ -1,67 +1,19 @@
-/* banner section==------------------------------- */
-
-.banner {
-    width: 100%;
-    height: 70vh;
-    background: url(/media/banner.jpg) no-repeat center/cover;
-    margin-bottom: 25px;
-}
-
-.shade {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, #2b124c, #2b124c97, #522b5b00);
-    /* z-index: 1; */
-}
-
-.banner-container {
-    width: 60%;
-}
-
-.banner-head h1 {
-    color: white;
-    font-size: 4rem;
-}
-
-.banner-head h4 {
-    color: white;
-    font-size: 2rem;
-}
-
-.banner-head h4 a {
-    text-decoration: none;
-    color: white;
-    transition: all ease 0.3s;
-}
-
-.banner-head h4 a:hover {
-    color: #854f6c;
-}
-
-
 /* contact card section=------------------------------- */
 
 .contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
+    background: url(/static/media/theme.jpg) center/cover no-repeat fixed;
 }
 
-.contact-card {
-    width: 100%;
+.contact-card-box {
+    width: 95%;
     max-width: 650px;
     height: auto;
     background: transparent;
     backdrop-filter: blur(5px);
-    border: solid 0.5px #c198d9;
+    background-color: #fffefe1a;
+    border: solid 0.5px #DAA520;
     border-radius: 15px;
     box-shadow: 0px 1px 15px black;
-    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +28,7 @@
 
 .card-img i {
     font-size: 4rem;
-    color: #c198d9;
+    color: #FFD700;
 }
 
 .card-info {
@@ -106,7 +58,7 @@
 }
 
 .card-info p a:hover {
-    color: #c198d9;
+    color: #FFD700;
     text-decoration: underline;
 }
 
@@ -119,11 +71,6 @@
     color: white;
     overflow: hidden;
     text-decoration: none;
-}
-
-.email-address a:hover {
-    text-decoration: underline;
-    color: #854f6c;
 }
 
 
@@ -150,6 +97,10 @@
 
 /* contact form section--------------------------------- */
 
+.form-outer-container {
+    background: url(/static/media/slide1.jpg) center/cover no-repeat fixed;
+}
+
 .form-head {
     margin: 30px;
     width: 70%;
@@ -168,17 +119,16 @@
 }
 
 .contact-form {
-    margin: auto;
-    width: 85%;
+    width: 95%;
     background: transparent;
     backdrop-filter: blur(5px);
-    border: solid 0.5px #c198d9;
+    border: solid 0.5px #FFD700;
     border-radius: 15px;
     box-shadow: 0px 1px 15px #000000;
 }
 
 .contact-form input[type=text] {
-    border: solid 0.5px #c198d9;
+    border: solid 0.5px #FFD700;
     background: transparent;
     backdrop-filter: blur(5px);
     margin: 10px;
@@ -190,7 +140,7 @@
 }
 
 .contact-form input[type=email] {
-    border: solid 0.5px #c198d9;
+    border: solid 0.5px #FFD700;
     background: transparent;
     backdrop-filter: blur(5px);
     margin: 10px;
@@ -202,7 +152,7 @@
 }
 
 .contact-form textarea {
-    border: solid 0.5px #c198d9;
+    border: solid 0.5px #FFD700;
     background: transparent;
     backdrop-filter: blur(5px);
     margin: 10px;
@@ -223,7 +173,7 @@
 .btn {
     /* border: solid 0.5px #c198d9; */
     border-radius: 5px;
-    background-color: #2b124c;
+    background-color: #FFD700;
     color: white;
     font-size: 1.2rem;
     margin: 10px;
@@ -238,196 +188,6 @@
 
 .btn:hover {
     color: white;
-    background-color: #522b5b;
-    box-shadow: 1px 1px 50px #522b5b;
-}
-
-
-/* footer section -------------------------------- */
-
-.footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: linear-gradient(to bottom right, #2b124c, #5f3169, #5f3169, #2b124c);
-    margin-top: 20px;
-    border: solid 0.5px #c198d9;
-    border-radius: 15px 15px 0px 0px;
-}
-
-.footer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.column-1 {
-    margin: 10px;
-    padding: 10px;
-    text-align: left;
-}
-
-.column-1 h1 {
-    color: #c198d9;
-    font-size: 1.8rem;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-}
-
-.column-1 ul li {
-    list-style: none;
-}
-
-.column-1 ul li a {
-    display: flex;
-    text-decoration: none;
-    transition: all 0.2s ease-in;
-}
-
-.column-1 ul li i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #3ce0ef;
-    padding: 5px;
-    margin: 5px;
-}
-
-.column-1 ul li p {
-    font-size: 1.1rem;
-    color: white;
-    margin: 5px;
-    padding: 5px;
-}
-
-.column-1 ul li a:hover {
-    transform: scale(1.2);
-}
-
-.column-3 ul {
-    color: white;
-    font-size: 1.1rem;
-    margin: 5px;
-    padding: 5px;
-}
-
-.column-3 li {
-    list-style: none;
-}
-
-.column-3 li a {
-    color: #c198d9;
-    text-decoration: none;
-    margin: 5px;
-    padding: 5px;
-}
-
-.column-3 li a:hover {
-    color: white;
-}
-
-.column-4 {
-    width: 40%;
-    height: 100%;
-    margin: 10px;
-    padding: 10px;
-}
-
-.column-4-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-
-/* .column-4 h1 {
-  font-weight: 10px;
-  font-family: serif;
-  color: transparent;
-  font-size: 4rem;
-  background-image: url(/media/space.png);
-  background-size: cover;
-  background-clip: text;
-  -webkit-background-clip: text;
-  margin: 5px;
-  padding: 5px;
-  color: #cdb466;
-} */
-
-.column-4 img {
-    width: 220px;
-    height: 173px;
-}
-
-.socialmedia {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-    padding: 5px;
-}
-
-.socialmedia i {
-    padding: 5px;
-    margin: 10px;
-    color: white;
-    font-size: 2rem;
-    transition: all 0.3s ease-in-out;
-}
-
-.socialmedia i:hover {
-    color: #854f6c;
-    transform: scale(1.2);
-}
-
-
-/* copyright section -------------------- */
-
-.copyright {
-    width: 100%;
-    background-color: #2b124c;
-    text-align: center;
-    border: 0.5px solid #c198d9;
-}
-
-.copyright h1 {
-    color: #c198d9;
-    font-size: 1.2rem;
-    margin: 5px;
-    padding: 5px;
-}
-
-
-/* go to top button--------------------------------------------- */
-
-.go-to-top {
-    width: 35px;
-    height: 35px;
-    background-image: linear-gradient(to bottom, #2b124c, #854f6c);
-    border-radius: 50%;
-    border: 0.5px solid #c198d9;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    text-align: center;
-}
-
-.go-to-top i {
-    color: white;
-    font-size: 1.2rem;
-    margin: 2px;
-    padding: 5px;
-}
-
-
-/* empty div------------------------------- */
-
-.empty {
-    height: 30px;
+    background-color: #FFD700;
+    box-shadow: 1px 1px 50px #FFD700;
 }

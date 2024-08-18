@@ -1,47 +1,4 @@
-{% extends 'base.html' %}
-
-{% block title %}About Us - Saturian Global{% endblock %}
-{% block meta %}
-<link rel="icon" href="/media/saturian.png">
-<meta name="keywords" content="Buy, Rent, Business, PC , Tablets, Laptop ">
-{% endblock %}
-{% block start %}
-
-
-    <!-- banner section-------------------------- -->
-
-    <section style="background: url(/media/about.jpg) no-repeat center/cover fixed;" class="about-banner"
-    id="about-banner">
-    <aside class="shade flex-center">
-        <div class="about-banner-head">
-            <h1>
-                About Us
-            </h1>
-            <h4><a href="{% url 'home' %}">Home</a>/About Us</h4>
-        </div>
-    </aside>
-</section>
-
-    <!-- company intro section--------------------------------------- -->
-
-    <section class="intro-first flex my20">
-      <div class="intro-para p-5">
-          <h1 class="mpt-5">Our Foundation</h1>
-          <p class="mpt-5">Founded in 2021, as a Pvt Ltd Company under Companies act of India, we are Indian company
-              with HQ in New Delhi and services capabilities PAN India through our own locations and strategic
-              alliances. we address wide range of business challenges
-              & complexities A leading provider of online technical support services to consumers and small businesses
-              across a wide range of computing and communications devices and software.Leveraging its proprietary
-              Digital Service Cloud software
-              technology platform, SATUIAN GLOBAL delivers support services to millions of customers globally and its
-              services are available on demand. SATURIAN GLOBAL recently launched on-ground support services as well,
-              which are currently
-              available across PAN India</p>
-      </div>
-  </section>
-
-   <!-- contact us card section==================== -->
-   <div class="contact-card-container wd-page flex-center-col my20">
+<div class="contact-card-container wd-page flex-center-col my20">
     <div class="contact-card wd-page flex-center-col my20">
         <h1 class="mpt-5 my10">To Get Latest Price Call Us</h1>
         <h1 class="mpt-5 my10">Don't Be Hesitate To Contact Us</h1>
@@ -53,7 +10,7 @@
     </div>
 </div>
 
-<section class="accordion-container-box my20">
+<section class="accordion-container-box" data-aos="fade-up">
     <section class="why-choose-us my20">
         <h3 class="mpt-5">WHY CHOOSE US</h3>
         <h1 class="mpt-5">Innovating Solutions</h1>
@@ -140,8 +97,3 @@
         </div>
     </div>
 </section>
-
-
-
-
-{% endblock start %}

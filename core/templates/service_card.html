@@ -1,28 +1,19 @@
-<center class="main-section">
-    <!-- <section class="container" data-aos="fade-up"> -->
-
-
+<div class="service-card-section wd-page flex-center-col">
+<div class="service-card-header flex-center-col my10">
+  <h1 class="mpt-5">Business Solutions To Grow Your Business.</h1>
+  <h2 class="mpt-5">We spesialise in providing IT Solutions for a vast range of
+      Masterplace Verticals, Infrastructural Systems, 360° IT Consulting &
+      Enterprise Solutions</h2>
+</div>
+  <div class="service-card-container flex my10 wd-page">
       {% for items in item  %}
-
       <a href="{% url 'service_detail' %}">
-        <div class="info-card" data-tilt>
+        <div class="info-card flex-center-col my10" data-tilt>
           <img src="/media/{{items.image}}" alt="service card" />
-          <h4>{{items.name}}</h4>
+          <h3 class="mpt-5">{{items.name}}</h3>
         </div>
       </a>
-
       {% endfor %}
-    <section class="container-info" data-aos="fade-up">
-      <h4>HOW CAN I HELP YOU</h4>
-      <h1>Business Solutions To Growth Business</h1>
-      <p>
-        We spesialise in providing IT Solutions for a vast range of
-        Masterplace Verticals, Infrastructural Systems, 360° IT Consulting &
-        Enterprise Solutions
-      </p>
-      <button class="btn-def" data-aos="flip-right">
-        <a href="{% url 'service_detail' %}">LEARN MORE <i class="fa fa-arrow-right"></i> </a>
-      </button>
-    </section>
-    <!-- </section> -->
-  </center>
+   </div>
+
+</div>

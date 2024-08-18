@@ -1,72 +1,100 @@
  <!-- footer section------------------------------------------------// -->
 
- <footer class="footer">
-    <section class="footer-container">
-      <div class="column-1">
-        <h1><strong>About Company</strong></h1>
-        <ul>
-          <li><a href="{% url 'services' %}"><i class="fa fa-receipt"></i>
-              <p>Services</p>
-            </a></li>
-          <li><a href="{% url 'about' %}"><i class="fa fa-receipt"></i>
-              <p>About</p>
-            </a></li>
-          <li><a href="{% url 'contact' %}"><i class="fa fa-receipt"></i>
-              <p>Contact Us</p>
-            </a></li>
-          <li><a href="https://www.bestgalaxyitsolutions.com"><i class="fa fa-receipt"></i>
-              <p>More With Galaxy IT Solutions</p>
-            </a></li>
-        </ul>
+ <footer class="footer flex-col">
+  <div class="footer-content-cotainer flex wd-page">
+      <div class="column-1 column-common flex-center-col">
+          <h1 class="mpt-5"><strong>About Company</strong></h1>
+          <ul>
+              <li><a href="Services.html" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">Services</p>
+                  </a></li>
+              <li><a href="About.html" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">About</p>
+                  </a></li>
+              <li><a href="Contact.html" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">Contact Us</p>
+                  </a></li>
+              <li><a href="https://www.globalsaturian.com" target="_blank" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">More With Saturian Global</p>
+                  </a></li>
+          </ul>
       </div>
-      <div class="column-2 column-1">
-        <h1><strong>Explore More</strong></h1>
-        <ul>
-          <li><a href="{% url 'details' %}?category=Laptop"><i class="fa fa-receipt"></i>
-              <p>PC For Rent</p>
-            </a></li>
-          <li><a href="{% url 'popular_service' %}"><i class="fa fa-receipt"></i>
-              <p>Digital Marketing</p>
-            </a></li>
-          <li><a href="{% url 'popular_service' %}"><i class="fa fa-receipt"></i>
-              <p>Product Engineering</p>
-            </a></li>
-          <li><a href="{% url 'service_detail' %}"><i class="fa fa-receipt"></i>
-              <p>Customize Your PC</p>
-            </a></li>
-        </ul>
+      <div class="column-2 column-common my20 flex-center-col">
+          <h1 class="mpt-5"><strong>Explore More</strong></h1>
+          <ul>
+              <li><a href="Service-details.html" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">PC For Rent</p>
+                  </a></li>
+              <li><a href="Popular-services.html" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">Digital Marketing</p>
+                  </a></li>
+              <li><a href="Popular-services.html" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">Product Engineering</p>
+                  </a></li>
+              <li><a href="Service-details.html" class="flex">
+                      <lord-icon src="https://cdn.lordicon.com/ygvjgdmk.json" trigger="hover"
+                          colors="primary:#FFD700" style="width:25px;height:25px">
+                      </lord-icon>
+                      <p class="mpt-5">Customize Your PC</p>
+                  </a></li>
+          </ul>
       </div>
-    </section>
-    <div class="column-3">
-      <ul>
-        <p>Mail Us Your Querries on</p>
-        <li> <a href="mailto:Info@Saturiannglobal.com" target="_blank">Info@Saturiannglobal.com</a></li>
-        <li><a href="mailto:contact@Saturiannglobal.com" target="_blank">Contact@Saturiannglobal.com</a></li>
-    </div>
-    <div class="column-4">
-      <div class="column-4-flex">
-        <!-- <h1><strong>Saturian Global</strong></h1> -->
-        <img src="/media/saturian.png" alt="saturian logo">
-        <div class="socialmedia">
-          <a href="https://www.instagram.com/saturian_global?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i
-              class="fab fa-instagram fa-lg"></i></a>
-          <a href="" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
-          <a href="http://www.linkedin.com/in/saturian-global-49889428a" target="_blank"><i
-              class="fab fa-linkedin fa-lg"></i></a>
-        </div>
+      </section>
+      <div class="column-3 my20 column-common flex-center-col">
+          <ul>
+              <p class="mpt-5">Mail Us Your Querries on</p>
+              <li><a class="mpt-5" href="mailto:Info@Saturianglobal.com"
+                      target="_blank">Info@Saturianglobal.com</a></li>
+              <li><a class="mpt-5" href="mailto:contact@Saturianglobal.com"
+                      target="_blank">Contact@Saturianglobal.com</a>
+              </li>
       </div>
-    </div>
-
-  </footer>
-  <!-- copyright section ----------------------->
-  <div class="copyright">
-    <h1>Copyright @2023 SATURIAN GLOBAL</h1>
+      <div class="column-4 my20 column-common flex-center-col">
+          <div class="column-4-img">
+              <img src="/media/saturian.png" alt="saturian logo">
+          </div>
+          <div class="socialmedia flex wd-page">
+              <a href="https://www.instagram.com/saturian_global?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i
+                      class="fab fa-instagram fa-lg"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61550589569176&mibextid=ZbWKwL" target="_blank"><i
+                      class="fab fa-facebook fa-lg"></i></a>
+              <a href="http://www.linkedin.com/in/saturian-global-49889428a" target="_blank"><i
+                      class="fab fa-linkedin fa-lg"></i></a>
+          </div>
+      </div>
+      <!-- copyright section ----------------------->
+      <div class="copyright flex-center wd-page">
+          <h1 class="mpt-5">Copyright @2023 SATURIAN GLOBAL</h1>
+      </div>
   </div>
-
+</footer>
 
   <!-- go to top button--------------------------------------- -->
-  <a href="#carousel">
+  <a href="#">
     <div class="go-to-top">
-      <i class="fas fa-long-arrow-alt-up"></i>
+        <lord-icon src="https://cdn.lordicon.com/ternnbni.json" trigger="hover" state="hover-arrow-up-2"
+            style="width:40px;height:40px" colors="primary:#FFD700">
+        </lord-icon>
     </div>
-  </a>
+</a>

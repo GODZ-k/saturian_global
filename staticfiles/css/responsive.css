@@ -1,827 +1,330 @@
-    /* navbar anf footer are responsive ------------------------------------------------------------------------------------------------- */
-    /* for all pages this is utility responsie css */
+/* for all pages this is utility responsie css */
 
-    @media (max-width: 970px) {
-        #hamburger {
-            display: block;
-            position: absolute;
-            right: 40px;
-        }
-        #hamburger i {
-            position: relative;
-        }
-        #navbar {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            right: -350px;
-            top: -10px;
-            z-index: 100;
-            color: red;
-            height: 100vh;
-            background-color: #2b124c;
-            background-image: linear-gradient(to bottom right, #2b124c, #522b5b);
-            position: fixed;
-            width: 320px;
-            transition: 0.4s;
-            padding: 108px 0 0 30px;
-            overflow-y: scroll;
-        }
-        #navbar.active {
-            right: -20px;
-        }
-        #navbar li {
-            margin-bottom: 30px;
-        }
-        #navbar li a {
-            font-size: 1rem;
-        }
-        #navbar li a:before {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            height: 3px;
-            width: 0;
-            background: #854f6c;
-            border-radius: 50px;
-            transition: width 0.3s ease-in-out;
-        }
-        #navbar :hover:before,
-        #navbar li a:hover {
-            width: 100%;
-            color: #dfb6b2;
-        }
-        #navbar #close {
-            display: block;
-        }
-        #close {
-            position: absolute;
-            top: 30px;
-            left: 50px;
-            font-size: 18px;
-        }
-        #navbar li ul {
-            overflow-y: scroll;
-        }
-        #navbar li ul li a {
-            font-size: 0.9rem;
-            margin-bottom: -10px;
-        }
-        .dropdown-menu[data-bs-popper] {
-            left: 25px;
-        }
+@media (max-width: 970px) {
+    #hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
     }
-
-    @media (max-width:450px) {
-        .logo-part h1 {
-            font-size: 1.1rem
-        }
+    #hamburger lordicon {
+        position: relative;
     }
-
-    @media (max-width:1100px) {
-        .footer {
-            flex-direction: column;
-        }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        right: -350px;
+        top: -10px;
+        z-index: 100;
+        color: red;
+        height: 100vh;
+        background: transparent;
+        backdrop-filter: blur(5px);
+        background-color: #0808089e;
+        position: fixed;
+        width: 320px;
+        transition: 0.4s;
+        padding: 108px 0 0 30px;
+        overflow-y: scroll;
     }
+    #navbar.active {
+        right: -20px;
+    }
+    #navbar li {
+        margin-bottom: 30px;
+    }
+    #navbar li a {
+        font-size: 1rem;
+    }
+    #navbar li a:before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        height: 3px;
+        width: 0;
+        background: #FFD700;
+        border-radius: 50px;
+        transition: width 0.3s ease-in-out;
+    }
+    #navbar :hover:before,
+    #navbar li a:hover {
+        width: 100%;
+        color: #FFC000;
+    }
+    .dropdown-menu {
+        overflow-y: scroll;
+        height: 40vh;
+    }
+    .dropdown-menu[data-bs-popper] {
+        left: 105px;
+    }
+    #navbar #close {
+        display: block;
+    }
+    #close {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        font-size: 18px;
+    }
+    #navbar li ul {
+        overflow-y: scroll;
+    }
+    #navbar li ul li a {
+        font-size: 0.9rem;
+        margin-bottom: -10px;
+    }
+}
 
-    .column-1 {
+@media (max-width:450px) {
+    .logo-part h1 {
+        font-size: 1.1rem
+    }
+}
+
+
+/* home banner section------------------------- */
+
+@media (max-width:585px) {
+    .header-text-container h1 {
+        font-size: 3rem;
+    }
+    .lower-text-container h3 {
+        color: #DAA520;
+        font: 1.7rem;
+    }
+    .info-link-1 a h4 {
+        font-size: 1rem;
+    }
+    .info-link-1 {
+        text-align: left;
+    }
+}
+
+
+/* service card section------------------------------ */
+
+@media (max-width:900px) {
+    .service-card-header {
+        width: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    .info-card {
+        width: 240px;
+        height: 190px
+    }
+    .info-card img {
+        width: 140;
+        height: 80px;
+    }
+    .info-card h3 {
+        font-size: .8rem;
+    }
+}
+
+
+/* footer section css------------------------- */
+
+
+/* footer section css------------------------- */
+
+
+/* footer section css------------------------- */
+
+@media (max-width:320px) {
+    .column-4-img img {
+        width: 250px;
+        height: 170px;
+    }
+    .column-3 ul p {
+        font-size: 1rem;
+    }
+    .column-common li a {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* baneer section for pages=========================== */
+
+
+/* baneer section for pages=========================== */
+
+
+/* baneer section for pages=========================== */
+
+
+/* baneer section for pages=========================== */
+
+@media(max-width:400px) {
+    .about-banner {
+        height: 50vh;
+    }
+    .about-banner-head h1 {
+        font-size: 2.5rem;
+    }
+    .about-banner-head h4 {
+        font-size: 1rem;
+    }
+}
+
+
+/* about page css section ////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 700px) {
+    .intro-para h1 {
+        font-size: 1.5rem;
+    }
+    .intro-para p {
+        font-size: 1rem;
+    }
+}
+
+
+/* contact page csss-------------------------------------////////////////////////////// */
+
+@media (max-width: 500px) {
+    .card-img i {
+        font-size: 3rem;
+    }
+    .card-info h1 {
+        font-size: 1.1rem;
+    }
+    .card-info p {
+        font-size: 0.8rem;
+    }
+    .card-info p a {
+        font-size: 0.8rem;
+    }
+    .office-address p {
+        font-size: 0.9rem;
+    }
+    .email-address a {
+        font-size: 0.8rem;
+    }
+    .maps {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 666px) {
+    .form-head h1 {
+        font-size: 1.6rem;
+    }
+    .form-head h3 {
+        font-size: 1.1rem;
+    }
+     ::placeholder {
+        font-size: 0.8rem;
+    }
+    .contact-form input[type=text] {
+        width: 80%;
+    }
+    .contact-form input[type=email] {
+        width: 80%;
+    }
+    .contact-form textarea {
+        width: 80%;
+    }
+    .btn {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* service page css/////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 650px) {
+    .first-heading-container {
+        width: 95%;
+    }
+    .first-heading-container h1 {
+        font-size: 1rem;
+    }
+    .first-heading-container h3 {
+        font-size: 0.8rem;
+    }
+    .heading h1 {
+        font-size: 1rem;
+    }
+    .heading h2 {
+        font-size: 0.7rem;
+    }
+    .about-card {
+        width: 200px;
+        height: 300px;
+    }
+    .about-card img {
+        height: 150px;
+    }
+    .about-card h1 {
+        font-size: 0.8rem;
+    }
+    .about-card p {
+        font-size: 0.7rem;
+    }
+    .about-card a {
+        font-size: 0.7rem;
+    }
+    .about-card i {
+        font-size: 0.6rem;
+    }
+    .web-service-container h1 {
+        font-size: 0.9rem;
+    }
+    .web-service-container h3 {
+        font-size: 0.6rem;
+    }
+    .f-h2 {
+        font-size: 0.6rem;
+    }
+    .f-ul li {
+        font-size: 0.6rem;
+    }
+    .btn-web a {
+        font-size: 8px;
+        padding: 3px;
+    }
+    .btn-web a i {
+        padding: 2px;
+    }
+}
+
+
+/* service details page css-------------------------------- */
+
+@media(max-width:450px) {
+    .service-form h1 {
+        font-size: 1.5rem;
+    }
+    .service-form input[type=text] {
         margin: 5px;
         padding: 5px;
     }
-
-    .column-3 {
+    .service-form input[type=email] {
         margin: 5px;
         padding: 5px;
     }
-
-    @media (max-width:550px) {
-        .footer-container {
-            flex-direction: column;
-        }
-        .column-1 h1 {
-            font-size: 0.9rem;
-        }
-        .column-1 ul li p {
-            font-size: 0.6rem;
-        }
-        .column-1 ul li i {
-            font-size: 0.6rem;
-        }
-        .column-3 li {
-            font-size: 0.9rem;
-        }
-        .socialmedia i {
-            font-size: 1.1rem;
-        }
-        .column-3-flex p {
-            font-size: 0.6rem;
-        }
-        .copyright h1 {
-            font-size: 0.7rem;
-        }
+    .service-form textarea {
+        margin: 5px;
+        padding: 5px;
     }
-    /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
-    /* --------------------------------------------------------------------------------------------------------------------------------------------------------------\\\\\\\
-  \\\\\\\\\\\\\\\\\\\\\\\|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-  \\\\\\\\\\\\\\\\\\\\\\\|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-  \\\\\\\\\\\\\\\\\\\\\\\|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-  \\\\\\\\\\\\\\\\\\\\\\\|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
-  \\\\\\\\\\\\\\\\\\\\\\\|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\ */
-    /*home page ki responsive css hai isme------------------------------------------------------------------------------ */
-    /* midle section------------------ */
-
-    @media (max-width:1200px) {
-        .list-box {
-            width: 200px;
-            height: 140px;
-        }
-        .list-view {
-            flex-direction: column;
-        }
+    .service-form ::placeholder {
+        padding: 5px;
+        margin: 5px;
+        font-size: .9rem;
     }
-
-    @media (max-width:800px) {
-        .our-ratings {
-            flex-direction: column;
-            width: 70%;
-        }
-        .our-achivements img {
-            height: 62px;
-            width: 80px;
-        }
-        .our-achivements h1 {
-            font-size: 2rem;
-        }
-        .our-achivements h3 {
-            font-size: 1.2rem;
-        }
+    .btn {
+        margin: 5px;
+        padding: 5px;
     }
-
-    @media(max-width:630px) {
-        /* carousel section --------------------- */
-        .carousel-box {
-            height: 60vh;
-        }
-        .carousel-item img {
-            height: 55vh;
-        }
-        .carousel-text h5 {
-            font-size: 1.5rem;
-        }
-        .carousel-text p {
-            font-size: 0.6rem;
-        }
-        /* main services section ---------------- */
-        .info-card {
-            height: 140px;
-            width: 195px;
-            padding: 20px;
-        }
-        .info-card img {
-            height: 65px;
-            width: 75px;
-        }
-        .info-card h4 {
-            font-size: 0.6rem;
-        }
-        .container-info h4 {
-            font-size: 0.6rem;
-        }
-        .container-info p {
-            font-size: 0.7rem;
-        }
-        .container-info h1 {
-            font-size: 0.9rem;
-        }
-        .btn-def {
-            margin: 0px;
-            padding: 0px;
-        }
-        .container-info a {
-            font-size: 8px;
-            padding: 5px;
-            margin: 5px;
-        }
-        .btn-def a i {
-            padding: 3px;
-        }
-        /* middel section ---------------------------- */
-        .middle-section {
-            width: 100%;
-        }
-        .middle-section h6 {
-            font-size: 0.7rem;
-        }
-        .middle-section h1 {
-            font-size: 1.1rem;
-        }
-        .middle-section p {
-            font-size: 0.7rem;
-        }
-        .list-box {
-            margin: 0px;
-        }
-        .list-view {
-            width: 70%;
-        }
-        .service-list ul li i {
-            font-size: 0.8rem;
-            margin: 5px;
-        }
-        .service-list ul li p {
-            margin: 5px;
-            padding: 5px;
-            font-size: 0.6rem;
-        }
-        /* acivements box------------------ */
-        .our-ratings {
-            width: 70%;
-            top: -135px;
-        }
-        .our-achivements img {
-            height: 40px;
-            width: 60px;
-        }
-        .our-achivements h1 {
-            font-size: 2rem;
-        }
-        .our-achivements h3 {
-            font-size: .8rem;
-        }
-        /* service card section----------------------------------------------------------- */
-        .card-box-heading h2 {
-            font-size: 0.7rem;
-        }
-        .card-box-heading h1 {
-            font-size: 1.1rem;
-        }
-        .service-card {
-            margin: 15px;
-            width: 200px;
-            height: 190px;
-        }
-        .service-card-img {
-            width: 100%;
-            height: 160px;
-        }
-        .hover-img h3 {
-            font-size: .6rem;
-        }
-        .service-card:hover .hover-img {
-            top: -200px;
-        }
-        .service-card h1 {
-            margin: -3px;
-            padding: 4px;
-            font-size: 1.2rem;
-        }
-        /* * accordian section---------------------------------------------------------------- */
-        */ .accordion-container-box {
-            width: 70%;
-            border-radius: 15px;
-            border: solid 0.5px #c198d9;
-            background: transparent;
-            backdrop-filter: blur(5px);
-            margin: auto;
-        }
-        .why-choose-us {
-            margin: 10px;
-            padding: 10px;
-            text-align: center;
-        }
-        .why-choose-us h3 {
-            color: white;
-            font-size: 1.1rem;
-            margin: 5px;
-            padding: 5px;
-        }
-        .why-choose-us h1 {
-            color: white;
-            font-size: 2rem;
-            margin: 5px;
-            padding: 5px;
-        }
-        /* accordian section---------------------------------------------------------------- */
-        .why-choose-us h3 {
-            color: white;
-            font-size: 0.6rem;
-        }
-        .why-choose-us h1 {
-            font-size: 1.1rem;
-        }
+    .service-buttons .s-b {
+        margin: 10px 0px;
     }
-
-    @media(max-width:475px) {
-        .info-card {
-            height: 120px;
-            width: 165px;
-            padding: 12px;
-        }
-        .info-card img {
-            height: 50px;
-            width: 80px;
-        }
-        .info-card h4 {
-            font-size: 0.6rem;
-            text-align: center;
-        }
-        .container-info {
-            margin: 3px;
-            padding: 3px;
-        }
-        .middle-section {
-            width: 80vw;
-        }
-        .list-box {
-            width: 160px;
-            height: 110px;
-            margin: 0px;
-        }
-        .service-list {
-            margin: 0px;
-            padding: 2px;
-        }
-        .our-ratings {
-            width: 80%;
-        }
-        .our-achivements img {
-            height: 30px;
-            width: 50px;
-        }
-        .our-achivements h1 {
-            font-size: 1.5rem;
-        }
-        .our-achivements h3 {
-            font-size: 0.5rem;
-        }
+    .service-buttons .s-b p {
+        font-size: 0.9rem;
     }
-
-    @media (max-width:330px) {
-        .card-box {
-            width: 75%;
-        }
-        .service-card {
-            margin: 15px;
-            width: 170px;
-            height: 180px;
-        }
-        .service-card-img {
-            width: 100%;
-            height: 150px;
-        }
-        .hover-img h3 {
-            font-size: .6rem;
-        }
-        .service-card:hover .hover-img {
-            top: -155px;
-        }
-        .service-card h1 {
-            margin: -3px;
-            padding: 4px;
-            font-size: 1rem;
-        }
-    }
-    /* ---------------------------------------------------------------------------- */
-    /* contact us page ki css hai isme------------------------------------------ */
-
-    @media (max-width:460px) {
-        .banner {
-            height: 50vh;
-        }
-        .banner-head h1 {
-            font-size: 2rem;
-        }
-        .banner-head h4 {
-            font-size: 1.1rem;
-        }
-        .car-img {
-            margin: 5px;
-            padding: 5px;
-        }
-        .card-img i {
-            font-size: 2.5rem;
-        }
-        .card-info h1 {
-            font-size: 1.2rem;
-        }
-        .card-info p {
-            font-size: 0.7rem;
-            margin: 2px;
-            padding: 2px;
-        }
-        .email-address a {
-            font-size: 0.6rem;
-        }
-        .maps {
-            height: 50vh;
-        }
-        .form-head {
-            margin: 10px;
-        }
-        .form-head h1 {
-            font-size: 1.6rem;
-        }
-        .form-head h3 {
-            font-size: 1.1rem;
-        }
-        .contact-form {
-            width: 100%;
-        }
-        .contact-form input[type=text] {
-            margin: 5px;
-            padding: 5px;
-        }
-        .contact-form textarea {
-            margin: 5px;
-            padding: 5px;
-        }
-         ::placeholder {
-            color: white;
-            padding: 10px;
-            margin: 10px;
-            font-size: .7rem;
-        }
-        .btn {
-            font-size: 0.7rem;
-            margin: 5px;
-            padding: 5px;
-        }
-    }
-
-    @media(max-width:700px) {
-        .contact-container {
-            width: 100%;
-        }
-    }
-    /* --------------------------------------------------------------------------------------------------------- */
-    /* About page ki css hai isme-------------------------------------------------------- */
-
-    @media(max-width:850px) {
-        .intro-first {
-            flex-direction: column;
-        }
-        .intro-para {
-            padding: 5px;
-            text-align: left;
-            width: 60%;
-        }
-        .intro-para h1 {
-            font-size: 2.2rem;
-        }
-        .intro-para p {
-            font-size: 1.1rem;
-            color: white;
-            padding: 5px;
-            margin: 5px;
-        }
-        .intro-img {
-            width: 50%;
-        }
-    }
-
-    @media(max-width:450px) {
-        /* banner section----------------------------------------- */
-        .about-banner {
-            height: 50vh;
-        }
-        .about-banner-head h1 {
-            font-size: 2rem;
-        }
-        .about-banner-head h4 {
-            font-size: 1rem;
-        }
-        /* company intro section----------------------------------------------- */
-        .intro-para h1 {
-            font-size: 1.5rem;
-        }
-        .intro-para p {
-            font-size: 0.7rem;
-        }
-        .intro-img {
-            width: 60%;
-            height: 40vh;
-            margin: 10px;
-            background: url(/media/intro-img.jpg);
-            border: 0.5px solid #c198d9;
-            border-radius: 15px;
-            box-shadow: 0px 1px 15px black;
-        }
-        /* team members section---------------- */
-        .profile-head h1 {
-            font-size: 1.1rem;
-        }
-        .profile-head h3 {
-            font-size: 0.8rem;
-        }
-        .profile-card-container {
-            width: 100%;
-        }
-        .pf-card {
-            height: 170px;
-            width: 200px;
-            padding: 10px;
-        }
-        .pf-card:hover {
-            height: 210px;
-        }
-        .pf-card:hover>.pf-img {
-            transform: translateY(-60px);
-        }
-        .pf-img {
-            height: 120px;
-        }
-        #not-hidden {
-            font-size: 0.9rem;
-        }
-        .pf-card:hover>#not-hidden {
-            transform: translateY(-50px);
-        }
-        .pf-content {
-            transform: translateY(-150px);
-        }
-        .pf-card:hover>.pf-content {
-            transform: translateY(-60px);
-        }
-        .pf-content p {
-            font-size: 0.7rem;
-        }
-        .pf-link i {
-            font-size: 1rem;
-        }
-        /* <!-- popular aervices section-------------------------- --> */
-        .heading h1 {
-            font-size: 1.1rem;
-        }
-        .heading h2 {
-            font-size: 0.9rem;
-        }
-        .about-card {
-            height: 240px;
-            margin: 10px;
-            padding: 10px;
-        }
-        .about-card img {
-            width: 50%;
-            height: 110px;
-        }
-        .about-card h1 {
-            font-size: 0.9rem;
-        }
-        .about-card p {
-            font-size: 0.6rem;
-        }
-        .about-card a {
-            font-size: 0.6rem;
-        }
-        .about-card i {
-            font-size: 0.5rem;
-        }
-    }
-    /* Services page ki css hai isme ----------------------------------------------------------------- */
-    /* <!-- service intro section-------------------------------------------------- --> */
-
-    @media(max-width:630px) {
-        .first-heading-container {
-            width: 80%;
-            padding: 10px;
-        }
-        .first-heading-container h1 {
-            font-size: 1.5rem;
-        }
-        .first-heading-container h3 {
-            font-size: 1.2rem;
-        }
-    }
-    /* web service section------------------------------------------ */
-
-    @media(max-width:710px) {
-        .web-service-container h1 {
-            font-size: 1.5rem;
-        }
-        .web-service-container h3 {
-            font-size: 1.2rem;
-        }
-        .f-h2 {
-            font-size: 0.8rem;
-        }
-        .f-ul li {
-            color: #dfb6b2;
-            font-size: 0.7rem;
-            list-style: none;
-            margin: 5px;
-            padding: 5px;
-            transition: all linear 0.3s;
-        }
-    }
-
-    @media(max-width:550px) {
-        /* <!-- service intro section-------------------------------------------------- --> */
-        .first-heading-container h1 {
-            font-size: 1.1rem;
-        }
-        .first-heading-container h3 {
-            font-size: 0.9rem;
-        }
-        /* web service section------------------------------------------ */
-        .web-service-container {
-            padding: 5px;
-        }
-        .web-service-container h1 {
-            font-size: 1rem;
-        }
-        .web-service-container h3 {
-            font-size: 0.8rem;
-        }
-        .web-framework {
-            flex-direction: column;
-            padding: 5px;
-            margin: 5px;
-        }
-        .forntend {
-            margin: 5px;
-            padding: 5px;
-        }
-        .f-h2 {
-            font-size: 0.8rem;
-            margin: 5px;
-            padding: 5px;
-        }
-        .f-ul li {
-            color: #dfb6b2;
-            font-size: 0.6rem;
-            list-style: none;
-            margin: 5px;
-            padding: 5px;
-            transition: all linear 0.3s;
-        }
-        .btn-web {
-            margin: 5px;
-            padding: 5px;
-        }
-        .btn-web a {
-            font-size: 10px;
-        }
-    }
-    /* -------------------------------------------------------------------------------------------------------- */
-    /* services details page ki css hai isme---------------------------------------------- */
-
-    @media(max-width:740px) {
-        /* <!-- main serviecs section----------------------- --> */
-        .content-container {
-            width: 100%;
-            flex-direction: column;
-        }
-        .h-w {
-            margin: 0px;
-        }
-        .content-columns-1 {
-            width: 100%;
-        }
-        .service-form {
-            margin: 5px;
-            padding: 5px;
-        }
-        .service-form input[type=text] {
-            width: 80%;
-        }
-        .service-form input[type=email] {
-            width: 80%;
-        }
-        .service-form textarea {
-            width: 80%;
-        }
-        .content-columns-2 {
-            width: 100%;
-        }
-    }
-
-    @media(max-width:460px) {
-        /* computer rental services------------------------------- */
-        .rental-services h1 {
-            font-size: 1.5rem;
-        }
-        .rental-services h2 {
-            font-size: 1rem;
-        }
-        .rental-services p {
-            font-size: 0.8rem;
-        }
-        .service-form h1 {
-            font-size: 1.2rem;
-        }
-        /* form==------------- */
-        .service-form ::placeholder {
-            font-size: 0.9rem;
-            margin: 5px;
-            padding: 5px;
-        }
-        .service-buttons {
-            margin: 5px;
-            padding: 5px;
-        }
-        .service-buttons .s-b {
-            margin: 5px;
-        }
-        .service-buttons .s-b p {
-            font-size: 1.1rem;
-        }
-        .service-details h1 {
-            font-size: 1.5rem;
-            color: white;
-            margin: 5px;
-            padding: 5px;
-        }
-        .service-details h2 {
-            font-size: 1.1rem;
-            color: white;
-            margin: 5px;
-            padding: 5px;
-        }
-        .service-details p {
-            font-size: 0.8rem;
-            color: white;
-            margin: 5px;
-            padding: 5px;
-        }
-    }
-    /* --------------------------------------------------------------------------------------------------------------- */
-    /* popular service page ki  css hai --------------------------------- */
-    /* Product page ki css hai ------------------------------------------------------------------------------------------------------- */
-
-    @media(max-width:1010px) {
-        .product-card-container {
-            width: 100%;
-        }
-    }
-
-    @media(max-width:685px) {
-        .product-card-container {
-            width: 100%;
-            padding: 5px;
-        }
-        .card {
-            width: 100%;
-            margin: 5px;
-        }
-        .heading-of-product h1 {
-            font-size: 1rem;
-            color: white;
-            margin: 5px;
-            padding: 5px;
-            text-align: center;
-        }
-    }
-
-    @media (max-width: 607px) {
-        .product-card-container {
-            flex-direction: column;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    @media(max-width:320px) {
-        .modal-content {
-            width: 100%;
-        }
-        .modal-header h1 {
-            color: white;
-            font-size: 0.7rem;
-        }
-    }
-    /* view detail page---------------------------------------------------------------------- */
-
-    @media(max-width:1100px) {
-        .canvas {
-            flex-direction: column;
-            height: auto;
-        }
-        .product-img {
-            width: 600px;
-        }
-        .product-specs {
-            height: auto;
-        }
-    }
-
-    @media(max-width:825px) {
-        .product-specs {
-            height: auto;
-            width: 95% !important;
-        }
-    }
-
-    @media(max-width:490px) {
-        .product-img {
-            width: 20rem !important;
-            height: 35vh !important;
-        }
-    }
-
-    @media(max-width:325px) {
-        .product-img {
-            width: 95% !important;
-        }
-    }
+}

@@ -1,39 +1,65 @@
 <header id="header">
-    <div class="logo-part">
-      <a href="{% url 'home' %}">
-        <img src="/media/saturian.png " alt="saturian logo" />
-        <h1>Saturian Global</h1>
+  <div class="logo-part">
+    <a href="{% url 'home' %}">
+      <img src="/media/saturian.png " alt="saturian logo" />
+      <h1>Saturian Global</h1>
+    </a>
+  </div>
+  <ul id="navbar" class="navbar">
+    <li class="link">
+      <a href="{% url 'home' %}" class="active">Home</a>
+    </li>
+    <li class="link">
+      <a href="{% url 'about' %}">About</a>
+    </li>
+    <li class="link nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Products
       </a>
-    </div>
-    <ul id="navbar" class="navbar">
-      <li>
-        <a href="{% url 'home' %}" class="active">Home</a>
-      </li>
-      <li>
-        <a href="{% url 'about' %}">About</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Products
-        </a>
-        <ul class="dropdown-menu res-drop">
-
-          {% for category in categories %}
-          <li><a class="dropdown-item" href="{% url 'details' %}?category={{category.name}}">{{category.name}}</a></li>
-          {% endfor %}
-        </ul>
-      </li>
-      <li>
-        <a href="{% url 'services' %}">Services</a>
-      </li>
-      <li>
-        <a href="{% url 'contact' %}">Contact us</a>
-      </li>
-      <a href="#" id="close">
-        <i class="far fa-times"></i>
-      </a>
-    </ul>
-    <div id="hamburger">
-      <i id="bar" class="far fa-outdent"></i>
-    </div>
-  </header>
+      <ul class="dropdown-menu">
+        {% for category in categories %}
+        <li>
+          <a
+            class="dropdown-item"
+            href="{% url 'details' %}?category={{category.name}}"
+            >{{category.name}}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li class="link">
+      <a href="{% url 'services' %}">Services</a>
+    </li>
+    <li class="link">
+      <a href="{% url 'contact' %}">Contact us</a>
+    </li>
+    <a href="#" id="close" class="link">
+      {% comment %} <i class="far fa-times"></i> {% endcomment %}
+      <lord-icon
+        src="https://cdn.lordicon.com/nqtddedc.json"
+        trigger="hover"
+        colors="primary:#FFD700"
+        style="width: 25px; height: 25px"
+      >
+      </lord-icon>
+    </a>
+  </ul>
+  <div id="hamburger">
+    <i id="bar" class="far fa-outdent"></i>
+    <load-icon
+      id="bar"
+      src="https://cdn.lordicon.com/swcqkzdc.json"
+      trigger="hover"
+      style="width: 25px; height: 25px"
+      colors="primary:#FFD700"
+    >
+    </lord-icon>
+  </div>
+</header>

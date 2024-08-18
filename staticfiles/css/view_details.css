@@ -1,79 +1,150 @@
+.product-canvas-container {
+    background: url(/static/media/theme.jpg) center/cover no-repeat fixed;
+}
+
 .canvas {
-  width: 100%;
-  /* height: 80svh; */
-  margin: 20px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    justify-content: space-evenly;
 }
 
 .product-img {
-  width: 50%;
-  height: 80vh;
-  margin: auto;
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    max-width: 25rem;
+    width: 95%;
+    height: 25rem;
+    overflow: hidden;
+    border-radius: 5px;
+    border: solid .2px #FFD700;
 }
 
 .product-img img {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 5pxs;
+    height: 100%;
 }
 
 .product-specs {
-  width: 50%;
-  height: 80vh;
-  margin: 5px;
-  border-radius: 5px;
-  background: transparent;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.specification {
-  margin: 8px;
-  text-align: center;
+    max-width: 45rem;
+    width: 95%;
 }
 
 .specification h1 {
-  font-size: 2rem;
-  color: white;
-  margin: 5px;
-  padding:5px;
+    font-size: 2rem;
+    color: white;
 }
+
 .specification p {
-  font-size: 1rem;
-  color: white;
-  margin: 5px;
-  padding:10px;
+    font-size: 1rem;
+    color: white;
 }
 
-.service-provided{
-  width: 100%;
-  margin: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.service-provided {
+    width: 100%;
 }
 
-.s-p-tags{
-  width: 90%;
-  margin: 5px;
-  text-align: center;
-  color: white;
-  border: 0.5px solid white;
-  border-radius: 5px;
-  font-size: 1.1rem;
+.s-p-tags {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    width: 90%;
+    color: white;
+    border: 0.5px solid #FFD700;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-.s-p-tags i{
-  color: white;
+.quotation-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #DAA520;
+    transition: all linear 0.3s;
+}
+
+.quotation-btn:hover {
+    background-color: #FFD700;
+    box-shadow: 1px 1px 50px #FFD700;
+}
+
+.quotation-btn p {
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* <!-- quotqtion modal----------------------------------------------------- --> */
+
+.modal-content {
+    width: clamp(200px, 90vw, 450px);
+    background-color: #fffefe1a;
+    backdrop-filter: blur(5px);
+    padding: clamp(1rem, 100vw, 0rem);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    border: solid 0.5px #DAA520;
+    border-radius: 15px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-header h1 {
+    color: white;
+    font-size: 1rem;
+}
+
+.close_btn {
+    color: white;
+}
+
+.form input {
+    border-right: none;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-radius: 0;
+    color: white;
+    border-bottom: 1px solid rgb(84, 82, 82);
+}
+
+.form input::placeholder {
+    color: white;
+}
+
+.form textarea::placeholder {
+    color: white;
+}
+
+.form input:focus,
+.form textarea:focus {
+    background: transparent;
+    box-shadow: none;
+    color: white;
+    border-bottom: 1px solid rgb(84, 82, 82);
+}
+
+.form input:active,
+.form textarea:active {
+    background-color: none;
+}
+
+.form textarea {
+    background: transparent;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(84, 82, 82);
+    color: white;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.modal-footer .btn {
+    color: white;
+    background-color: #FFD700;
+    border: none;
+    transition: all linear 0.3s;
+    margin: 5px;
+}
+
+.modal-footer .btn:hover {
+    background-color: #FFD700;
+    box-shadow: 1px 1px 50px #FFD700;
 }
