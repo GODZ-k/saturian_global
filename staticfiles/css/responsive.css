@@ -1,8 +1,8 @@
 /* for all pages this is utility responsie css */
 
-@media (max-width: 970px) {
+@media screen and (max-width: 970px) {
     #hamburger {
-        display: block;
+        display: block !important;
         position: absolute;
         right: 20px;
     }
