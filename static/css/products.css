@@ -45,13 +45,13 @@
 }
 
 .card-title {
-    color: white;
+    color: black;
     font-size: 1rem;
 }
 
 .card-text {
     width: 100%;
-    color: white;
+    color: black;
     font-size: .9rem;
     white-space: nowrap;
     text-overflow: ellipsis;
